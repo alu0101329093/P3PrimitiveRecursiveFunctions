@@ -2,7 +2,7 @@
 
 namespace cc {
 
-ProjectionFunction::ProjectionFunction(std::size_t index) : index_{index} {}
+ProjectionFunction::ProjectionFunction(std::size_t index) : index_{index - 1} {}
 
 std::vector<int> ProjectionFunction::Evaluate(
     const std::vector<int>& args) const {
