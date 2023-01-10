@@ -1,8 +1,6 @@
 #ifndef P3PRIMITIVERECURSIVEFUNCTIONS_PRIMITIVE_RECURSION_OPERATION_H_
 #define P3PRIMITIVERECURSIVEFUNCTIONS_PRIMITIVE_RECURSION_OPERATION_H_
 
-#include "combination_function.h"
-#include "identity_function.h"
 #include "primitive_recursive_function.h"
 
 namespace cc {
