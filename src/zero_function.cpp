@@ -1,5 +1,9 @@
 #include "zero_function.h"
 
-std::vector<int> cc::ZeroFunction::evaluate(const std::vector<int>& args) {
+namespace cc {
+
+std::vector<int> ZeroFunction::evaluate(const std::vector<int>& args) {
   return std::vector<int>{0};
 }
+
+}  // namespace cc
