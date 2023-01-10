@@ -7,7 +7,7 @@ namespace cc {
 
 class ZeroFunction : public PrimitiveRecursiveFunction {
  public:
-  std::vector<int> Evaluate(const std::vector<int>& args) override;
+  std::vector<int> Evaluate(const std::vector<int>& args) const override;
 };
 
 }  // namespace cc
