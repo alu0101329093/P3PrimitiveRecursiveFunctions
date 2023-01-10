@@ -2,7 +2,7 @@
 
 namespace cc {
 
-std::vector<int> IdentityFunction::evaluate(const std::vector<int>& args) {
+std::vector<int> IdentityFunction::Evaluate(const std::vector<int>& args) {
   return args;
 }
 

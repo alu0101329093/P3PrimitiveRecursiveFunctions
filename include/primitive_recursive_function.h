@@ -8,7 +8,7 @@ namespace cc {
 
 class PrimitiveRecursiveFunction {
  public:
-    virtual std::vector<int> evaluate(const std::vector<int>& args) = 0;
+  virtual std::vector<int> Evaluate(const std::vector<int>& args) = 0;
 };
 
 using PRFPtr = std::shared_ptr<PrimitiveRecursiveFunction>;

@@ -10,7 +10,7 @@ namespace cc {
 class ProjectionFunction : public PrimitiveRecursiveFunction {
  public:
   explicit ProjectionFunction(std::size_t index);
-  std::vector<int> evaluate(const std::vector<int>& args) override;
+  std::vector<int> Evaluate(const std::vector<int>& args) override;
 
  private:
   std::size_t index_;

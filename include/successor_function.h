@@ -7,7 +7,7 @@ namespace cc {
 
 class SuccessorFunction : public PrimitiveRecursiveFunction {
  public:
-  std::vector<int> evaluate(const std::vector<int>& args) override;
+  std::vector<int> Evaluate(const std::vector<int>& args) override;
 };
 
 }  // namespace cc
