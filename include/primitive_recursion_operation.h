@@ -7,6 +7,8 @@ namespace cc {
 
 class PrimitiveRecursionOperation : public PrimitiveRecursiveFunction {
  public:
+  static PRFPtr Make(PRFPtr first_function, PRFPtr second_function);
+
   explicit PrimitiveRecursionOperation(PRFPtr first_function,
                                        PRFPtr second_function);
 

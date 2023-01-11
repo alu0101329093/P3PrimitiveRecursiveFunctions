@@ -2,6 +2,12 @@
 
 namespace cc {
 
+PRFPtr CompositionOperation::Make(PRFPtr first_function,
+                                  PRFPtr second_function) {
+  return std::make_shared<CompositionOperation>(first_function,
+                                                second_function);
+}
+
 CompositionOperation::CompositionOperation(PRFPtr first_function,
                                            PRFPtr second_function)
     : first_function_{std::move(first_function)},

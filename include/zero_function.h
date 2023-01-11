@@ -7,6 +7,8 @@ namespace cc {
 
 class ZeroFunction : public PrimitiveRecursiveFunction {
  public:
+  static PRFPtr Make();
+
   std::vector<int> Evaluate(const std::vector<int>& args) const override;
 };
 

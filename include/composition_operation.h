@@ -7,6 +7,8 @@ namespace cc {
 
 class CompositionOperation : public PrimitiveRecursiveFunction {
  public:
+  static PRFPtr Make(PRFPtr first_function, PRFPtr second_function);
+
   explicit CompositionOperation(PRFPtr first_function, PRFPtr second_function);
 
   std::vector<int> Evaluate(const std::vector<int>& args) const override;

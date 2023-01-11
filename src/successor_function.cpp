@@ -2,6 +2,10 @@
 
 namespace cc {
 
+PRFPtr SuccessorFunction::Make() {
+  return std::make_shared<SuccessorFunction>();
+}
+
 std::vector<int> SuccessorFunction::Evaluate(
     const std::vector<int>& args) const {
   std::vector<int> result;

@@ -9,6 +9,8 @@ namespace cc {
 
 class ProjectionFunction : public PrimitiveRecursiveFunction {
  public:
+  static PRFPtr Make(std::size_t index);
+
   explicit ProjectionFunction(std::size_t index);
   std::vector<int> Evaluate(const std::vector<int>& args) const override;
 

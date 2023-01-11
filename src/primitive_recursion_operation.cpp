@@ -2,6 +2,12 @@
 
 namespace cc {
 
+PRFPtr PrimitiveRecursionOperation::Make(PRFPtr first_function,
+                                         PRFPtr second_function) {
+  return std::make_shared<PrimitiveRecursionOperation>(first_function,
+                                                       second_function);
+}
+
 PrimitiveRecursionOperation::PrimitiveRecursionOperation(PRFPtr first_function,
                                                          PRFPtr second_function)
     : first_function_{std::move(first_function)},

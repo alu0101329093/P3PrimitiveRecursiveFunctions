@@ -2,6 +2,12 @@
 
 namespace cc {
 
+PRFPtr CombinationOperation::Make(PRFPtr first_function,
+                                  PRFPtr second_function) {
+  return std::make_shared<CombinationOperation>(first_function,
+                                                second_function);
+}
+
 CombinationOperation::CombinationOperation(PRFPtr first_function,
                                            PRFPtr second_function)
     : first_function_{std::move(first_function)},

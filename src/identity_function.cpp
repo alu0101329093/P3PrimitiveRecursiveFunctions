@@ -2,7 +2,10 @@
 
 namespace cc {
 
-std::vector<int> IdentityFunction::Evaluate(const std::vector<int>& args) const {
+PRFPtr IdentityFunction::Make() { return std::make_shared<IdentityFunction>(); }
+
+std::vector<int> IdentityFunction::Evaluate(
+    const std::vector<int>& args) const {
   return args;
 }
 

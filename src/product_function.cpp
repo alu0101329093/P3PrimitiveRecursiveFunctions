@@ -2,16 +2,18 @@
 
 namespace cc {
 
-std::vector<int> ProductFunction::Evaluate(const std::vector<int>& args) const {
-  PRFPtr limit_function{std::make_shared<ZeroFunction>()};
+PRFPtr ProductFunction::Make() { return std::make_shared<ProductFunction>(); }
 
-  PRFPtr add_function{std::make_shared<AddFunction>()};
-  PRFPtr project_one_function{std::make_shared<ProjectionFunction>(1)};
-  PRFPtr project_three_function{std::make_shared<ProjectionFunction>(3)};
-  PRFPtr project_combination{std::make_shared<CombinationOperation>(
-      project_one_function, project_three_function)};
-  PRFPtr recursion_function{std::make_shared<CompositionOperation>(
-      add_function, project_combination)};
+std::vector<int> ProductFunction::Evaluate(const std::vector<int>& args) const {
+  PRFPtr limit_function{ZeroFunction::Make()};
+
+  PRFPtr add_function{AddFunction::Make()};
+  PRFPtr project_one_function{ProjectionFunction::Make(1)};
+  PRFPtr project_three_function{ProjectionFunction::Make(3)};
+  PRFPtr project_combination{
+      CombinationOperation::Make(project_one_function, project_three_function)};
+  PRFPtr recursion_function{
+      CompositionOperation::Make(add_function, project_combination)};
 
   PrimitiveRecursionOperation recursion_operation{limit_function,
                                                   recursion_function};
